@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HistoryComponent } from './history/history.component';
 import { SearchComponent } from './search/search.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { HistoryService } from './history.service';
 
 const appRoutes: Routes = [
   { path: 'history', component: HistoryComponent },
@@ -19,12 +21,13 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
   ],
-  providers: [],
+  providers: [HistoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
