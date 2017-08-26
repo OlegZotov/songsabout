@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   constructor() { }
-
+  searchResult = '';
   ngOnInit() {
+  }
+  grouphandle() {
+    console.log(this.searchResult);
   }
 
 }

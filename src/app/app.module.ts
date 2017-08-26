@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HistoryComponent } from './history/history.component';
 import { SearchComponent } from './search/search.component';
 import { RouterModule, Routes } from '@angular/router';
+
 
 const appRoutes: Routes = [
   { path: 'history', component: HistoryComponent },
@@ -15,9 +17,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HistoryComponent,
-    SearchComponent
+    SearchComponent,
+    
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,
