@@ -1,3 +1,11 @@
-<div>
-  {{results}}
+<div class="container">
+    <h1>Search Form</h1>
+    <form>
+      <div class="form">
+        <label for="name">Group name</label>
+        <input type="text" class="form-control" id="name" required
+        [(ngModel)]="searchPattern" name="name">
+      </div>
+      <button type="submit" class="btn btn-success" (click)="grouphandle()">Submit</button>
+    </form>
 </div>

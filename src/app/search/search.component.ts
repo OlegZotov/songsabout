@@ -10,6 +10,7 @@ import { HistoryService } from '../history.service';
 export class SearchComponent implements OnInit {
 
   results;
+  searchPattern = '';
 
   constructor(private http: Http, private historyService: HistoryService) { }
 
@@ -20,6 +21,10 @@ export class SearchComponent implements OnInit {
     //   // Read the result field from the JSON response.
     //   this.results = data['results'];
     // });
+  }
+  grouphandle() {
+    this.historyService.addData({search: this.searchPattern});
+    console.log(this.searchPattern);
   }
 
 }
