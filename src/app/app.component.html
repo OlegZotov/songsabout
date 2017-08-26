@@ -1,12 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
+<div class="container">
+  <div class="header ">
+    <h1>
+      Welcome to {{title}}!
+    </h1>
+  </div>
+  <nav class="navbar navbar-default">
+    <a routerLink="/search" routerLinkActive="active">search</a>
+    <a routerLink="/history" routerLinkActive="active">history</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
-<nav>
-  <a routerLink="/search" routerLinkActive="active">search</a>
-  <a routerLink="/history" routerLinkActive="active">history</a>
-</nav>
-<router-outlet></router-outlet>
 
