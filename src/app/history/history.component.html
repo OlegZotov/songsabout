@@ -1,5 +1,8 @@
 <div class="list-container">
-  <div class="list" *ngFor="let item of hystory">
+  <div class="empty-history" *ngIf="history.length === 0">
+    history is empty
+  </div>
+  <div class="list" *ngFor="let item of history">
     <div class="item">
       {{item.search}}
     </div>
